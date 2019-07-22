@@ -26,6 +26,12 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:background="@drawable/ic_pokemon_background">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/White" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/pokemon_fight"
@@ -58,6 +64,7 @@
             android:textSize="80dp" />
 
     </LinearLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -66,11 +73,13 @@
         android:layout_marginBottom="8dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97"
+        app:layout_constraintVertical_bias="0.971"
         app:menu="@menu/bottom_nav_menu" />
 
 
