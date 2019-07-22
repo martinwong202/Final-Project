@@ -18,8 +18,46 @@
         android:text="@string/title_home"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/Blue"/>
+        android:textColor="@color/Blue"
+        android:shadowColor="@color/White"/>
+    <LinearLayout
+        android:id="@+id/pokemon_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_pokemon_background">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pokemon_fight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_pokemon_fight">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pokemon_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/ic_pokemon_home">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Pokemon"
+            android:textColor="@color/Blue"
+            android:textSize="80dp" />
+
+        <TextView
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Fight"
+            android:textColor="@color/Blue"
+            android:textSize="80dp" />
+
+    </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -34,5 +72,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.97"
         app:menu="@menu/bottom_nav_menu" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,21 +8,21 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:id="@+id/navigation_pokemon"
+        android:icon="@drawable/ic_pokemon_black"
         android:iconTint="@color/Blue"
-        android:title="@string/title_dashboard"/>
+        android:title="@string/Pokemon"/>
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:id="@+id/navigation_fight"
+        android:icon="@drawable/ic_pokemon_fight_icon"
         android:iconTint="@color/Blue"
-        android:title="@string/title_notifications" />
+        android:title="@string/Fight" />
     <item
-        android:id="@+id/navigation_read"
+        android:id="@+id/navigation_account"
         android:icon="@drawable/ic_book_black"
         android:iconTint="@color/Blue"
-        android:title="@string/title_read" />
+        android:title="@string/Account" />
     <item
         android:id="@+id/navigation_Liked"
         android:icon="@drawable/ic_heart_blue"
