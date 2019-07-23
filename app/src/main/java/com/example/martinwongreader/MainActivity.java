@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     int Shp1=1;
     TextView UHP;
     int Shp2=9999;
-    private int mGengarhp=1;
+    private int Gengarhp=1;
     private int userhp=1;
 
 
@@ -144,8 +144,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public void onClick(View view) {
         if (view.getId() == R.id.Attack_button)
         {
-            userhp--;
-            UHP.setText("HP:"+userhp);
+            double num = Math.random();
+            if(num<0.5) {
+                userhp--;
+                UHP.setText("HP:" + userhp);
+            }
+            else{
+                Gengarhp--;
+                DHP.setText("Hp:"+Gengarhp);
+            }
         }
     }
 }
