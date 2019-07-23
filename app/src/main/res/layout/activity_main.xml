@@ -20,32 +20,93 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/Blue"
         android:shadowColor="@color/White"/>
+
     <LinearLayout
         android:id="@+id/pokemon_field"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/ic_pokemon_background"
         android:orientation="horizontal"
-        android:background="@drawable/ic_pokemon_background">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:textColor="@color/White" />
+            android:id="@+id/check_button"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="Search" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="Add" />
+
     </LinearLayout>
+        <LinearLayout
+        android:id="@+id/pokemon_added"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="300dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/ic_pokemon_gengar" />
+
+    </LinearLayout>
+
+
+
     <LinearLayout
         android:id="@+id/pokemon_fight"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:background="@drawable/ic_pokemon_fight">
+
+        <ImageView
+            android:id="@+id/Gengar_image"
+            android:layout_width="224dp"
+            android:layout_height="189dp"
+            android:background="@drawable/ic_pokemon_gengar"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="100dp"/>
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="224dp"
+            android:layout_height="189dp"
+            android:background="@drawable/ic_pokemon_gengar"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="100dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginBottom="300dp" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/pokemon_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/ic_pokemon_home"
         android:orientation="vertical"
-        android:background="@drawable/ic_pokemon_home">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="261dp">
 
         <TextView
             android:layout_width="wrap_content"

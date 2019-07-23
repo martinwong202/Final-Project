@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout mPokemonField;
     private LinearLayout mPokemonFight;
     private LinearLayout mPokemonHome;
+    private LinearLayout mPokemonAdded;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,30 +36,35 @@ public class MainActivity extends AppCompatActivity {
                     mPokemonField.setVisibility(View.GONE);
                     mPokemonFight.setVisibility(View.GONE);
                     mPokemonHome.setVisibility(View.VISIBLE);
+                    mPokemonAdded.setVisibility(View.GONE);
                     return true;
                 case R.id.navigation_pokemon:
                     mTextMessage.setText(R.string.Pokemon);
                     mPokemonField.setVisibility(View.VISIBLE);
                     mPokemonFight.setVisibility(View.GONE);
                     mPokemonHome.setVisibility(View.GONE);
+                    mPokemonAdded.setVisibility(View.VISIBLE);
                     return true;
                 case R.id.navigation_fight:
                     mTextMessage.setText(R.string.Fight);
                     mPokemonField.setVisibility(View.GONE);
                     mPokemonFight.setVisibility(View.VISIBLE);
                     mPokemonHome.setVisibility(View.GONE);
+                    mPokemonAdded.setVisibility(View.GONE);
                     return true;
                 case R.id.navigation_account:
                     mTextMessage.setText(R.string.Account);
                     mPokemonField.setVisibility(View.GONE);
                     mPokemonFight.setVisibility(View.GONE);
                     mPokemonHome.setVisibility(View.GONE);
+                    mPokemonAdded.setVisibility(View.GONE);
                     return true;
                 case R.id.navigation_Liked:
                     mTextMessage.setText("Liked");
                     mPokemonField.setVisibility(View.GONE);
                     mPokemonFight.setVisibility(View.GONE);
                     mPokemonHome.setVisibility(View.GONE);
+                    mPokemonAdded.setVisibility(View.GONE);
                     return true;
             }
             return false;
@@ -75,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         mPokemonField = (LinearLayout) findViewById(R.id.pokemon_field);
         mPokemonFight = (LinearLayout) findViewById(R.id.pokemon_fight);
         mPokemonHome = (LinearLayout) findViewById(R.id.pokemon_home);
+        mPokemonAdded =(LinearLayout) findViewById(R.id.pokemon_added);
     }
 }
 
