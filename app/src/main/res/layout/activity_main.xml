@@ -208,7 +208,7 @@
         android:id="@+id/user_image"
         android:layout_width="224dp"
         android:layout_height="189dp"
-        android:background="@drawable/ic_pokemon_raquaza"
+        android:src="@drawable/ic_pokemon_raquaza"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="80dp"

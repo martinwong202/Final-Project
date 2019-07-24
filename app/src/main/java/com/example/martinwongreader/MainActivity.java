@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private LinearLayout mInfo;
     private Button mInfo_button;
     private ImageView mInfoImg;
+//    private ImageView RATK;
 
 
 
@@ -172,11 +173,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         return false;
     }
-
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.Attack_button)
         {
+            mUserImg.setImageResource(android.R.color.transparent);
+            mUserImg.setImageResource(R.drawable.ic_rayquaza_atkform);
+
             double num = Math.random();
             if(num<0.5) {
                 if(userhp==0){
