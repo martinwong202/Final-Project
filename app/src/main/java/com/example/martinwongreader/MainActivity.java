@@ -250,22 +250,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //                mText.setText("Rayquaza has missed its attack.");
             }
             if(num<0.5&&number<0.5){
-                Toast myToast = Toast.makeText(this, "Both Gengar and Rayquaza has successfully attacked.", Toast.LENGTH_LONG);
+                Toast myToast = Toast.makeText(this, "Both Gengar and Rayquaza has successfully attacked.", Toast.LENGTH_SHORT);
                 myToast.setGravity(Gravity.CENTER, 0, 0);
                 myToast.show();
             }
             else if(num<0.5&&number>=0.5){
-                Toast myToast = Toast.makeText(this, "Gengar has missed and Rayquaza has attacked.", Toast.LENGTH_LONG);
+                Toast myToast = Toast.makeText(this, "Gengar has missed and Rayquaza has attacked.", Toast.LENGTH_SHORT);
                 myToast.setGravity(Gravity.CENTER, 0, 0);
                 myToast.show();
             }
             else if(num>0.5&&number<0.5){
-                Toast myToast = Toast.makeText(this, "Gengar has successfully attacked and Rayquaza has missed.", Toast.LENGTH_LONG);
+                Toast myToast = Toast.makeText(this, "Gengar has successfully attacked and Rayquaza has missed.", Toast.LENGTH_SHORT);
                 myToast.setGravity(Gravity.CENTER, 0, 0);
                 myToast.show();
             }
             else{
-                Toast myToast = Toast.makeText(this, "Both Gengar and Rayquaza has missed.", Toast.LENGTH_LONG);
+                Toast myToast = Toast.makeText(this, "Both Gengar and Rayquaza has missed.", Toast.LENGTH_SHORT);
                 myToast.setGravity(Gravity.CENTER, 0, 0);
                 myToast.show();
             }
@@ -321,22 +321,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //            }
         }
         else if(view.getId()==R.id.move1){
-            Toast myToast = Toast.makeText(this, "The user of Outrage attacks for 2-3 turns, during which it cannot switch out, and then becomes confused. Confused Pokémon have a 33% chance of hurting themselves each turn, for 1-4 attacking turns", Toast.LENGTH_LONG);
+            Toast myToast = Toast.makeText(this, "The user of Outrage attacks for 2-3 turns, during which it cannot switch out, and then becomes confused. Confused Pokémon have a 33% chance of hurting themselves each turn, for 1-4 attacking turns", Toast.LENGTH_SHORT);
             myToast.setGravity(Gravity.CENTER, 0, 0);
             myToast.show();
         }
         else if(view.getId()==R.id.move2){
-            Toast myToast = Toast.makeText(this, "Twister inflicts damage and has a 20% chance of causing each target to flinch. It will hit all adjacent opponents in battles featuring multiple Pokémon.", Toast.LENGTH_LONG);
+            Toast myToast = Toast.makeText(this, "Twister inflicts damage and has a 20% chance of causing each target to flinch. It will hit all adjacent opponents in battles featuring multiple Pokémon.", Toast.LENGTH_SHORT);
             myToast.setGravity(Gravity.CENTER, 0, 0);
             myToast.show();
         }
         else if(view.getId()==R.id.move3){
-            Toast myToast = Toast.makeText(this, "ExtremeSpeed inflicts damage. It has a priority of +1, so is used before all moves that do not have increased priority.", Toast.LENGTH_LONG);
+            Toast myToast = Toast.makeText(this, "ExtremeSpeed inflicts damage. It has a priority of +1, so is used before all moves that do not have increased priority.", Toast.LENGTH_SHORT);
             myToast.setGravity(Gravity.CENTER, 0, 0);
             myToast.show();
         }
         else if(view.getId()==R.id.move4){
-            Toast myToast = Toast.makeText(this, "A two turn move where the pokemon flies in the sky to attack.", Toast.LENGTH_LONG);
+            Toast myToast = Toast.makeText(this, "A two turn move where the pokemon flies in the sky to attack.", Toast.LENGTH_SHORT);
             myToast.setGravity(Gravity.CENTER, 0, 0);
             myToast.show();
         }
