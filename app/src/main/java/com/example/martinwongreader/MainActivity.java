@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private Button mInfo_button;
     private ImageView mInfoImg;
     private TextView mText;
+    private Button move1;
+    private Button move2;
+    private Button move3;
+    private Button move4;
+
 //    private ImageView RATK;
 
 
@@ -71,6 +76,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mInfo_button=(Button) findViewById(R.id.info_button);
         mInfoImg=(ImageView) findViewById(R.id.info_img);
         mText=(TextView) findViewById(R.id.Text_display);
+        move1=(Button) findViewById(R.id.move1);
+        move2=(Button) findViewById(R.id.move2);
+        move3=(Button) findViewById(R.id.move3);
+        move4=(Button) findViewById(R.id.move4);
 
         DHP=(TextView) findViewById(R.id.gengarHP);
         DHP.setText("HP:"+Shp1);
@@ -79,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
         mAttack.setOnClickListener (this);
+        move1.setOnClickListener(this);
+        move2.setOnClickListener(this);
+        move3.setOnClickListener(this);
+        move4.setOnClickListener(this);
+
         mInfo_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -299,5 +313,26 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //                }
 //            }
         }
+        else if(view.getId()==R.id.move1){
+            Toast myToast = Toast.makeText(this, "The user of Outrage attacks for 2-3 turns, during which it cannot switch out, and then becomes confused. Confused Pokémon have a 33% chance of hurting themselves each turn, for 1-4 attacking turns", Toast.LENGTH_LONG);
+            myToast.setGravity(Gravity.CENTER, 0, 0);
+            myToast.show();
+        }
+        else if(view.getId()==R.id.move2){
+            Toast myToast = Toast.makeText(this, "Twister inflicts damage and has a 20% chance of causing each target to flinch. It will hit all adjacent opponents in battles featuring multiple Pokémon.", Toast.LENGTH_LONG);
+            myToast.setGravity(Gravity.CENTER, 0, 0);
+            myToast.show();
+        }
+        else if(view.getId()==R.id.move3){
+            Toast myToast = Toast.makeText(this, "ExtremeSpeed inflicts damage. It has a priority of +1, so is used before all moves that do not have increased priority.", Toast.LENGTH_LONG);
+            myToast.setGravity(Gravity.CENTER, 0, 0);
+            myToast.show();
+        }
+        else if(view.getId()==R.id.move4){
+            Toast myToast = Toast.makeText(this, "A two turn move where the pokemon flies in the sky to attack.", Toast.LENGTH_LONG);
+            myToast.setGravity(Gravity.CENTER, 0, 0);
+            myToast.show();
+        }
+
     }
 }
