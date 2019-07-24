@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private Button move2;
     private Button move3;
     private Button move4;
+    private Button Shiny;
+
 
 //    private ImageView RATK;
 
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         move2=(Button) findViewById(R.id.move2);
         move3=(Button) findViewById(R.id.move3);
         move4=(Button) findViewById(R.id.move4);
+        Shiny=(Button) findViewById(R.id.Button_added);
+
 
         DHP=(TextView) findViewById(R.id.gengarHP);
         DHP.setText("HP:"+Shp1);
@@ -92,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         move2.setOnClickListener(this);
         move3.setOnClickListener(this);
         move4.setOnClickListener(this);
+        Shiny.setOnClickListener(this);
 
         mInfo_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 mPokemonHome.setVisibility(View.VISIBLE);
                 mPokemonAdded.setVisibility(View.GONE);
                 mAccount.setVisibility(View.GONE);
-                mAttack.setVisibility(View.GONE);
+                mAttack.setVisibility(View.INVISIBLE);
                 mDefaultImg.setVisibility(View.GONE);
                 mUserImg.setVisibility(View.GONE);
                 mUserHp.setVisibility(View.GONE);
@@ -253,7 +258,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 myToast.show();
             }
             else if(num>0.5&&number<0.5){
-                Toast myToast = Toast.makeText(this, "Gengar has successfully attakced and Rayquaza has missed.", Toast.LENGTH_LONG);
+                Toast myToast = Toast.makeText(this, "Gengar has successfully attacked and Rayquaza has missed.", Toast.LENGTH_LONG);
                 myToast.setGravity(Gravity.CENTER, 0, 0);
                 myToast.show();
             }
@@ -334,5 +339,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             myToast.show();
         }
 
+        else if(view.getId()==R.id.Button_added)
+        {
+            mPokemonAdded.setImageResource(R.drawable.ic_shiny_rayqaza);
+        }
+        }
     }
-}
