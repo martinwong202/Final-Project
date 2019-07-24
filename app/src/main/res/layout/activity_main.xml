@@ -175,6 +175,15 @@
         android:orientation="vertical"
         android:background="@drawable/ic_pokemon_fight">
     </LinearLayout>
+    <TextView
+        android:id="@+id/Text_display"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="300dp"
+        android:textSize="30dp"
+        android:textColor="@color/White"/>
     <Button
         android:id="@+id/Attack_button"
         android:layout_width="wrap_content"
@@ -188,7 +197,7 @@
         android:id="@+id/Gengar_image"
         android:layout_width="224dp"
         android:layout_height="189dp"
-        android:background="@drawable/ic_pokemon_gengar"
+        android:src="@drawable/ic_normal_gengar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="400dp"

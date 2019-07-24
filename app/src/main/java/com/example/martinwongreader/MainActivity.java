@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private LinearLayout mInfo;
     private Button mInfo_button;
     private ImageView mInfoImg;
+    private TextView mText;
 //    private ImageView RATK;
 
 
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mInfo=(LinearLayout) findViewById(R.id.Info);
         mInfo_button=(Button) findViewById(R.id.info_button);
         mInfoImg=(ImageView) findViewById(R.id.info_img);
+        mText=(TextView) findViewById(R.id.Text_display);
 
         DHP=(TextView) findViewById(R.id.gengarHP);
         DHP.setText("HP:"+Shp1);
@@ -175,62 +177,127 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.Attack_button)
-        {
+        if (view.getId() == R.id.Attack_button) {
             mUserImg.setImageResource(android.R.color.transparent);
             mUserImg.setImageResource(R.drawable.ic_rayquaza_atkform);
-
+            mDefaultImg.setImageResource(R.drawable.ic_pokemon_gengar);
+            double number = Math.random();
             double num = Math.random();
-            if(num<0.5) {
-                if(userhp==0){
-                    Toast myToast = Toast.makeText(this, "Gengar has beaten you. Game over", Toast.LENGTH_SHORT);
-                    myToast.setGravity(Gravity.CENTER, 0, 0);
-                    myToast.show();
-                     userhp=50;
-                     Gengarhp=50;
-                     UHP.setText("HP:" + userhp);
-                     DHP.setText("Hp:" + Gengarhp);
-                }else if(Gengarhp==0){
-                    Toast myToast = Toast.makeText(this, "You have beaten Gengar. COngratulation you have beaten a bot.", Toast.LENGTH_SHORT);
-                    myToast.setGravity(Gravity.CENTER, 0, 0);
-                    myToast.show();
-                    userhp=50;
-                    Gengarhp=50;
-                    UHP.setText("HP:" + userhp);
-                    DHP.setText("Hp:" + Gengarhp);
-                }else {
-                    userhp--;
-                    UHP.setText("HP:" + userhp);
-                    Toast myToast = Toast.makeText(this, "Gengar has successfully attacked rayquaza. Rayquaza has missed.", Toast.LENGTH_SHORT);
-                    myToast.setGravity(Gravity.CENTER, 0, 0);
-                    myToast.show();
-                }
+            if (userhp == 0) {
+//                Toast myToast = Toast.makeText(this, "Gengar has beaten you. Game over", Toast.LENGTH_SHORT);
+//                myToast.setGravity(Gravity.CENTER, 0, 0);
+//                myToast.show();
+                mText.setText("Gengar has beaten you. Game over");
+                userhp = 50;
+                Gengarhp = 50;
+                UHP.setText("HP:" + userhp);
+                DHP.setText("Hp:" + Gengarhp);
+            } else if (Gengarhp == 0) {
+//                Toast myToast = Toast.makeText(this, "You have beaten Gengar. COngratulation you have beaten a bot.", Toast.LENGTH_SHORT);
+//                myToast.setGravity(Gravity.CENTER, 0, 0);
+//                myToast.show();
+                mText.setText("You have beaten Gengar. Congratulation you have beaten a bot.");
+                userhp = 50;
+                Gengarhp = 50;
+                UHP.setText("HP:" + userhp);
+                DHP.setText("Hp:" + Gengarhp);
+            }
+            if (number < 0.50) {
+                userhp--;
+                UHP.setText("HP:" + userhp);
+//                Toast myToast = Toast.makeText(this, "Gengar has successfully attacked rayquaza.", Toast.LENGTH_SHORT);
+//                myToast.setGravity(Gravity.CENTER, 0, 0);
+//                myToast.show();
+//                mText.setText("Gengar has successfully attacked rayquaza.");
+            } else {
+//                Toast myToast = Toast.makeText(this, "Gengar has missed its attack.", Toast.LENGTH_SHORT);
+//                myToast.setGravity(Gravity.CENTER, 0, 0);
+//                myToast.show();
+//                mText.setText("Gengar has missed its attack.");
+            }
+            if (num < 0.5) {
+                Gengarhp--;
+                DHP.setText("Hp:" + Gengarhp);
+//                Toast myToast = Toast.makeText(this, "Rayquaza has successfully attacked Gengar.", Toast.LENGTH_SHORT);
+//                myToast.setGravity(Gravity.CENTER, 0, 0);
+//                myToast.show();
+//                mText.setText("Rayquaza has successfully attacked Gengar.");
+            } else {
+//                Toast myToast = Toast.makeText(this, "Rayquaza has missed its attack.", Toast.LENGTH_SHORT);
+//                myToast.setGravity(Gravity.CENTER, 0, 0);
+//                myToast.show();
+//                mText.setText("Rayquaza has missed its attack.");
+            }
+            if(num<0.5&&number<0.5){
+                Toast myToast = Toast.makeText(this, "Both Gengar and Rayquaza has successfully attacked.", Toast.LENGTH_LONG);
+                myToast.setGravity(Gravity.CENTER, 0, 0);
+                myToast.show();
+            }
+            else if(num<0.5&&number>=0.5){
+                Toast myToast = Toast.makeText(this, "Gengar has missed and Rayquaza has attacked.", Toast.LENGTH_LONG);
+                myToast.setGravity(Gravity.CENTER, 0, 0);
+                myToast.show();
+            }
+            else if(num>0.5&&number<0.5){
+                Toast myToast = Toast.makeText(this, "Gengar has successfully attakced and Rayquaza has missed.", Toast.LENGTH_LONG);
+                myToast.setGravity(Gravity.CENTER, 0, 0);
+                myToast.show();
             }
             else{
-                if(userhp==0){
-                    Toast myToast = Toast.makeText(this, "Gengar has beaten you. Game over", Toast.LENGTH_SHORT);
-                    myToast.setGravity(Gravity.CENTER, 0, 0);
-                    myToast.show();
-                    userhp=50;
-                    Gengarhp=50;
-                    UHP.setText("HP:" + userhp);
-                    DHP.setText("Hp:" + Gengarhp);
-                }else if(Gengarhp==0) {
-                    Toast myToast = Toast.makeText(this, "You have beaten Gengar. COngratulation you have beaten a bot.", Toast.LENGTH_SHORT);
-                    myToast.setGravity(Gravity.CENTER, 0, 0);
-                    myToast.show();
-                    userhp = 50;
-                    Gengarhp = 50;
-                    UHP.setText("HP:" + userhp);
-                    DHP.setText("Hp:" + Gengarhp);
-                }else {
-                    Gengarhp--;
-                    DHP.setText("Hp:" + Gengarhp);
-                    Toast myToast = Toast.makeText(this, "Rayquaza has successfully attacked Gengar. Gengar has missed.", Toast.LENGTH_SHORT);
-                    myToast.setGravity(Gravity.CENTER, 0, 0);
-                    myToast.show();
-                }
+                Toast myToast = Toast.makeText(this, "Both Gengar and Rayquaza has missed.", Toast.LENGTH_LONG);
+                myToast.setGravity(Gravity.CENTER, 0, 0);
+                myToast.show();
             }
+//            if(num<0.5) {
+//                if(userhp==0){
+//                    Toast myToast = Toast.makeText(this, "Gengar has beaten you. Game over", Toast.LENGTH_SHORT);
+//                    myToast.setGravity(Gravity.CENTER, 0, 0);
+//                    myToast.show();
+//                     userhp=50;
+//                     Gengarhp=50;
+//                     UHP.setText("HP:" + userhp);
+//                     DHP.setText("Hp:" + Gengarhp);
+//                }else if(Gengarhp==0){
+//                    Toast myToast = Toast.makeText(this, "You have beaten Gengar. COngratulation you have beaten a bot.", Toast.LENGTH_SHORT);
+//                    myToast.setGravity(Gravity.CENTER, 0, 0);
+//                    myToast.show();
+//                    userhp=50;
+//                    Gengarhp=50;
+//                    UHP.setText("HP:" + userhp);
+//                    DHP.setText("Hp:" + Gengarhp);
+//                }else {
+//                    userhp--;
+//                    UHP.setText("HP:" + userhp);
+//                    Toast myToast = Toast.makeText(this, "Gengar has successfully attacked rayquaza. Rayquaza has missed.", Toast.LENGTH_SHORT);
+//                    myToast.setGravity(Gravity.CENTER, 0, 0);
+//                    myToast.show();
+//                }
+//            }
+//            else{
+//                if(userhp==0){
+//                    Toast myToast = Toast.makeText(this, "Gengar has beaten you. Game over", Toast.LENGTH_SHORT);
+//                    myToast.setGravity(Gravity.CENTER, 0, 0);
+//                    myToast.show();
+//                    userhp=50;
+//                    Gengarhp=50;
+//                    UHP.setText("HP:" + userhp);
+//                    DHP.setText("Hp:" + Gengarhp);
+//                }else if(Gengarhp==0) {
+//                    Toast myToast = Toast.makeText(this, "You have beaten Gengar. COngratulation you have beaten a bot.", Toast.LENGTH_SHORT);
+//                    myToast.setGravity(Gravity.CENTER, 0, 0);
+//                    myToast.show();
+//                    userhp = 50;
+//                    Gengarhp = 50;
+//                    UHP.setText("HP:" + userhp);
+//                    DHP.setText("Hp:" + Gengarhp);
+//                }else {
+//                    Gengarhp--;
+//                    DHP.setText("Hp:" + Gengarhp);
+//                    Toast myToast = Toast.makeText(this, "Rayquaza has successfully attacked Gengar. Gengar has missed.", Toast.LENGTH_SHORT);
+//                    myToast.setGravity(Gravity.CENTER, 0, 0);
+//                    myToast.show();
+//                }
+//            }
         }
     }
 }
