@@ -211,6 +211,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 Gengarhp = 50;
                 UHP.setText("HP:" + userhp);
                 DHP.setText("Hp:" + Gengarhp);
+                mUserImg.setImageResource(R.drawable.ic_pokemon_raquaza);
+                mDefaultImg.setImageResource(R.drawable.ic_normal_gengar);
             } else if (Gengarhp == 0) {
 //                Toast myToast = Toast.makeText(this, "You have beaten Gengar. COngratulation you have beaten a bot.", Toast.LENGTH_SHORT);
 //                myToast.setGravity(Gravity.CENTER, 0, 0);
